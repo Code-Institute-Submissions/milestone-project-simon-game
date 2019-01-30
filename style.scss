@@ -1,0 +1,108 @@
+/*colors*/
+
+$red: darkred;
+$redflash: red;
+$green: darkgreen;
+$greenflash: green;
+$blue: darkblue;
+$blueflash: blue;
+$yellow: khaki;
+$yellowflash: yellow;
+$black: black;
+
+
+/*box attributes*/
+
+$height: 200px;
+$width: 200px;
+$padding: 15px;
+$display: inline-block;
+$background-position: center;
+
+
+/*General body styling*/
+
+body {
+    background-color: $black;
+}
+
+.heading {
+    text-align: center;
+    background-color: $redflash;
+    color: $yellowflash;
+    padding-top: $padding;
+    padding-bottom: $padding;
+}
+
+#playButton {
+    height: 50px;
+    width: 300px;
+    background-color: $yellowflash;
+    color: $redflash;
+}
+
+
+/*section containing the 4 game boxes & their layout etc*/
+
+.container {
+    text-align: center;
+    padding-top: $padding;
+}
+
+.row1 {
+    height: 250px;
+    padding-top: $padding;
+}
+
+.row2 {
+    height: 220px;
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+.row3 {
+    height: 250px;
+    padding-top: $padding;
+}
+
+#redbox {
+    height: $height;
+    width: $width;
+    background-color: $red;
+    background-position: $background-position;
+    padding: $padding;
+    display: $display;
+    float: center;
+}
+
+#greenbox {
+    height: $height;
+    width: $width;
+    background-color: $green;
+    background-position: $background-position;
+    padding: $padding;
+    display: $display;
+    float: left;
+}
+
+#bluebox {
+    height: $height;
+    width: $width;
+    background-color: $blue;
+    background-position: $background-position;
+    padding: $padding;
+    display: $display;
+    float: center;
+}
+
+#yellowbox {
+    height: $height;
+    width: $width;
+    background-color: $yellow;
+    background-position: $background-position;
+    padding: $padding;
+    display: $display;
+    float: right;
+}
+
+

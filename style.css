@@ -1,0 +1,74 @@
+/*colors*/
+/*box attributes*/
+/*General body styling*/
+body {
+  background-color: black; }
+
+.heading {
+  text-align: center;
+  background-color: red;
+  color: yellow;
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+#playButton {
+  height: 50px;
+  width: 300px;
+  background-color: yellow;
+  color: red; }
+
+/*section containing the 4 game boxes & their layout etc*/
+.container {
+  text-align: center;
+  padding-top: 15px; }
+
+.row1 {
+  height: 250px;
+  padding-top: 15px; }
+
+.row2 {
+  height: 220px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.row3 {
+  height: 250px;
+  padding-top: 15px; }
+
+#redbox {
+  height: 200px;
+  width: 200px;
+  background-color: darkred;
+  background-position: center;
+  padding: 15px;
+  display: inline-block;
+  float: center; }
+
+#greenbox {
+  height: 200px;
+  width: 200px;
+  background-color: darkgreen;
+  background-position: center;
+  padding: 15px;
+  display: inline-block;
+  float: left; }
+
+#bluebox {
+  height: 200px;
+  width: 200px;
+  background-color: darkblue;
+  background-position: center;
+  padding: 15px;
+  display: inline-block;
+  float: center; }
+
+#yellowbox {
+  height: 200px;
+  width: 200px;
+  background-color: khaki;
+  background-position: center;
+  padding: 15px;
+  display: inline-block;
+  float: right; }
+
+/*# sourceMappingURL=style.css.map */
