@@ -41,6 +41,25 @@ body {
     color: $redflash;
 }
 
+#turn {
+    background: $yellowflash;
+    color: $redflash;
+    height: 30px;
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    display: inline-block;
+}
+
+.countertext {
+  font-family: arial;
+  text-align: center;
+}
+
 
 /*section containing the 4 game boxes & their layout etc*/
 
@@ -65,44 +84,40 @@ body {
     padding-top: $padding;
 }
 
-#redbox {
+
+/*most common reused attributes for boxes in this mixin*/
+
+@mixin box() {
+    @content;
     height: $height;
     width: $width;
-    background-color: $red;
     background-position: $background-position;
     padding: $padding;
     display: $display;
-    float: center;
 }
+
+#redbox {
+    @include box{
+    background-color: $red;
+    float: center;
+}}
 
 #greenbox {
-    height: $height;
-    width: $width;
+    @include box{
     background-color: $green;
-    background-position: $background-position;
-    padding: $padding;
-    display: $display;
     float: left;
-}
+}}
 
 #bluebox {
-    height: $height;
-    width: $width;
+    @include box{
     background-color: $blue;
-    background-position: $background-position;
-    padding: $padding;
-    display: $display;
     float: center;
-}
+}}
 
 #yellowbox {
-    height: $height;
-    width: $width;
+    @include box{
     background-color: $yellow;
-    background-position: $background-position;
-    padding: $padding;
-    display: $display;
     float: right;
-}
+}}
 
 

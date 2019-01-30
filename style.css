@@ -17,6 +17,23 @@ body {
   background-color: yellow;
   color: red; }
 
+#turn {
+  background: yellow;
+  color: red;
+  height: 30px;
+  width: 120px;
+  margin-top: 20px;
+  margin-bottom: 0;
+  font-size: 20px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  display: inline-block; }
+
+.countertext {
+  font-family: arial;
+  text-align: center; }
+
 /*section containing the 4 game boxes & their layout etc*/
 .container {
   text-align: center;
@@ -35,40 +52,41 @@ body {
   height: 250px;
   padding-top: 15px; }
 
+/*most common reused attributes for boxes in this mixin*/
 #redbox {
+  background-color: darkred;
+  float: center;
   height: 200px;
   width: 200px;
-  background-color: darkred;
   background-position: center;
   padding: 15px;
-  display: inline-block;
-  float: center; }
+  display: inline-block; }
 
 #greenbox {
+  background-color: darkgreen;
+  float: left;
   height: 200px;
   width: 200px;
-  background-color: darkgreen;
   background-position: center;
   padding: 15px;
-  display: inline-block;
-  float: left; }
+  display: inline-block; }
 
 #bluebox {
+  background-color: darkblue;
+  float: center;
   height: 200px;
   width: 200px;
-  background-color: darkblue;
   background-position: center;
   padding: 15px;
-  display: inline-block;
-  float: center; }
+  display: inline-block; }
 
 #yellowbox {
+  background-color: khaki;
+  float: right;
   height: 200px;
   width: 200px;
-  background-color: khaki;
   background-position: center;
   padding: 15px;
-  display: inline-block;
-  float: right; }
+  display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */
