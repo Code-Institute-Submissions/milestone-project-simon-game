@@ -18,6 +18,7 @@ let correct;          //is sequence correct?
 let whosTurn;
 let intervalid;       //time between auto selections
 let win;
+let noise = true;
 
 
 //declaring initial colour changing functions
@@ -81,19 +82,40 @@ function autoTurn() {
   }
 }
 
-function redTile() {                             //must add sounds to these
+function redTile() {                           //lights up and adds sound if selected
+  if (noise) {
+    let audio = document.getElementById("buzzRed");
+    audio.play();
+  }
+  noise = true;
   redbox.style.backgroundColor = "red";
 }
 
 function greenTile() {
+  
+  if (noise) {
+    let audio = document.getElementById("buzzGreen");
+    audio.play();
+  }
+  noise = true;
   greenbox.style.backgroundColor = "green";
 }
 
 function blueTile() {
+  if (noise) {
+    let audio = document.getElementById("buzzBlue");
+    audio.play();
+  }
+  noise = true;
   bluebox.style.backgroundColor = "blue";
 }
 
 function yellowTile() {
+  if (noise) {
+    let audio = document.getElementById("buzzYellow");
+    audio.play();
+  }
+  noise = true;
   yellowbox.style.backgroundColor = "yellow";
 }
 
@@ -147,12 +169,15 @@ function check() {
   if (playerTurn[playerTurn.length - 1] !== gameTurn[playerTurn.length - 1])
     correct = false;
 
-  if (playerTurn.length == 10 && correct) {        //10 levels, can add more
+  if (playerTurn.length == 10 && correct) {        //10 levels,can add more
     winGame();
 }
 
   if (correct == false) {
     lightUpColor();
+    let audio = document.getElementById("buzzlose");        //losing tone
+      audio.play();
+      noise = true;
     turnCounter.innerHTML = "THAT'S WRONG!";
     setTimeout(() => {
       turnCounter.innerHTML = turn;
@@ -176,4 +201,7 @@ function winGame () {
   lightUpColor();
   turnCounter.innerHTML = "YOU WIN!";
   win = true;
+  let audio = document.getElementById("buzzwin");         //winners tone
+    audio.play();
+    noise = true;
 }
