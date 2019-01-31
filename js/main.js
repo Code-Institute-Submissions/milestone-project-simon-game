@@ -48,7 +48,7 @@ function play() {
   playerTurn = [];
   win = false;
   turn = 1;
-  turnCounter.innerHTML = 'TURN: ' + 1;
+  turnCounter.innerHTML = "LET'S GO: " + 1;
   lightUp = 0;
   correct = true;
   intervalid = 0;
@@ -60,7 +60,7 @@ function play() {
 }
 
 
-//computer goes first & selects boxes randomly
+//computer goes first & selects boxes randomly...
 
 function autoTurn() {
   if (lightUp == turn) {
@@ -81,7 +81,7 @@ function autoTurn() {
   }
 }
 
-function redTile() {
+function redTile() {                             //must add sounds to these
   redbox.style.backgroundColor = "red";
 }
 
@@ -98,21 +98,82 @@ function yellowTile() {
 }
 
 
-//then player goes and boxes are waiting to be clicked here...
+//then player goes and boxes are waiting to be clicked...
 
 redbox.addEventListener('click', (event) => {
-  
+   playerTurn.push(1);
+    check();
+    redTile();
+    if(!win) {
+      setTimeout(() => {
+        clearColor(); }, 300);
+    }
 });
 
 greenbox.addEventListener('click', (event) => {
-  
+  playerTurn.push(2);
+    check();
+    greenTile();
+    if(!win) {
+      setTimeout(() => {
+        clearColor(); }, 300);
+    }
 });
 
 bluebox.addEventListener('click', (event) => {
-  
+  playerTurn.push(3);
+    check();
+    blueTile();
+    if(!win) {
+      setTimeout(() => {
+        clearColor(); }, 300);
+    }
 });
 
 yellowbox.addEventListener('click', (event) => {
-  
+  playerTurn.push(4);
+    check();
+    yellowTile();
+    if(!win) {
+      setTimeout(() => {
+        clearColor(); }, 300);
+    }
 });
 
+
+//to check if the player selected the correct boxes
+
+function check() {
+  if (playerTurn[playerTurn.length - 1] !== gameTurn[playerTurn.length - 1])
+    correct = false;
+
+  if (playerTurn.length == 10 && correct) {        //10 levels, can add more
+    winGame();
+}
+
+  if (correct == false) {
+    lightUpColor();
+    turnCounter.innerHTML = "THAT'S WRONG!";
+    setTimeout(() => {
+      turnCounter.innerHTML = turn;
+      clearColor();
+      turnCounter.innerHTML = "BACK TO LEVEL 1";
+    }, 800);
+  }
+
+  if (turn == playerTurn.length && correct && !win) {
+    turn++;
+    playerTurn = [];
+    whosTurn = true;
+    lightUp = 0;
+    turnCounter.innerHTML = turn;
+    intervalid = setInterval(autoTurn, 800);
+  }
+  }
+
+
+function winGame () {
+  lightUpColor();
+  turnCounter.innerHTML = "YOU WIN!";
+  win = true;
+}
