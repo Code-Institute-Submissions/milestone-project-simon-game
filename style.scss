@@ -1,145 +1,17 @@
-/*colors*/
-
-$red: darkred;
-$redflash: red;
-$green: darkgreen;
-$greenflash: green;
-$blue: darkblue;
-$blueflash: blue;
-$yellow: khaki;
-$yellowflash: yellow;
-$black: black;
-
-
-/*box attributes*/
-
-$height: 200px;
-$width: 200px;
-$padding: 15px;
-$display: inline-block;
-$background-position: center;
+/*colors, box attributes & most common reused attributes for boxes in mixin*/
+@import "helpers/colours";
+@import "helpers/dimensions";
+@import "helpers/mixins";
+@import "helpers/media_queries";
 
 
 /*General body styling*/
-
-body {
-    background-color: $black;
-}
-
-.heading {
-    text-align: center;
-    background-color: $redflash;
-    color: $yellowflash;
-    padding-top: $padding;
-    padding-bottom: $padding;
-}
-
-#playButton {
-    height: 50px;
-    width: 300px;
-    background-color: $yellowflash;
-    color: $redflash;
-}
-
-#turn {
-    background: $yellowflash;
-    color: $redflash;
-    height: 30px;
-    width: 150px;
-    margin-top: 20px;
-    margin-bottom: 0;
-    font-size: 16px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 30px;
-    display: inline-block;
-}
-
-.countertext {
-  font-family: arial;
-  text-align: center;
-}
+@import "pageLayout/body";
+@import "pageLayout/header";
 
 
-/*section containing the 4 game boxes & their layout etc*/
+/*section containing play button, turn counter and 4 game boxes*/
+@import "components/playButton";
+@import "components/turnCounter";
+@import "components/gameBoxes";
 
-.container {
-    text-align: center;
-    padding-top: $padding;
-}
-
-.row1 {
-    height: 250px;
-    padding-top: $padding;
-}
-
-.row2 {
-    height: 220px;
-    padding-left: $padding;
-    padding-right: $padding;
-}
-
-.row3 {
-    height: 250px;
-    padding-top: $padding;
-}
-
-
-/*most common reused attributes for boxes in this mixin*/
-
-@mixin box() {
-    @content;
-    height: $height;
-    width: $width;
-    background-position: $background-position;
-    padding: $padding;
-    display: $display;
-}
-
-#redbox {
-    @include box{
-    background-color: $red;
-    float: center;
-}}
-
-#greenbox {
-    @include box{
-    background-color: $green;
-    float: left;
-}}
-
-#bluebox {
-    @include box{
-    background-color: $blue;
-    float: center;
-}}
-
-#yellowbox {
-    @include box{
-    background-color: $yellow;
-    float: right;
-}}
-
-#buzzRed {
-    duration: .5;
-}
-
-#buzzGreen {
-    duration: .5;
-}
-
-#buzzBlue {
-    duration: .5;
-}
-
-#buzzYellow {
-    duration: .5;
-}
-
-#buzzwin {
-    duration: 2;
-}
-
-#buzzlose {
-    duration: 2;
-}

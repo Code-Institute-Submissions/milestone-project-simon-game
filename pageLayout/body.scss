@@ -1,0 +1,24 @@
+body {
+    background-color: $black;
+}
+
+.container {
+    text-align: center;
+    padding-top: $padding;
+}
+
+.row1 {
+    height: 250px;
+    padding-top: $padding;
+}
+
+.row2 {
+    height: 220px;
+    padding-left: $padding;
+    padding-right: $padding;
+}
+
+.row3 {
+    height: 250px;
+    padding-top: $padding;
+}
