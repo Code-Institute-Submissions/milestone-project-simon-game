@@ -1,24 +1,28 @@
 body {
-    background-color: $black;
+    background-color: $redflash;
 }
 
 .container {
     text-align: center;
-    padding-top: $padding;
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 50%;
+    background-color: $black;
 }
 
 .row1 {
-    height: 250px;
+    height: 200px;
     padding-top: $padding;
 }
 
 .row2 {
-    height: 220px;
-    padding-left: $padding;
-    padding-right: $padding;
+    height: 200px;
+    padding-top: $padding;
+    padding-bottom: 0px;
 }
 
 .row3 {
-    height: 250px;
+    height: 200px;
     padding-top: $padding;
 }

@@ -7,7 +7,7 @@
 #greenbox {
     @include box{
     background-color: $green;
-    float: left;
+    float: right;
 }}
 
 #bluebox {
@@ -19,6 +19,6 @@
 #yellowbox {
     @include box{
     background-color: $yellow;
-    float: right;
+    float: left;
 }}
 

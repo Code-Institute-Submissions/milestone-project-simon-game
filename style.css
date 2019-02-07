@@ -1,31 +1,36 @@
 /*colors, box attributes & most common reused attributes for boxes in mixin*/
 /*General body styling*/
 body {
-  background-color: black; }
+  background-color: red; }
 
 .container {
   text-align: center;
-  padding-top: 15px; }
+  padding-top: 20px;
+  padding-left: 0px;
+  padding-right: 0px;
+  max-width: 50%;
+  background-color: black; }
 
 .row1 {
-  height: 250px;
-  padding-top: 15px; }
+  height: 200px;
+  padding-top: 10px; }
 
 .row2 {
-  height: 220px;
-  padding-left: 15px;
-  padding-right: 15px; }
+  height: 200px;
+  padding-top: 10px;
+  padding-bottom: 0px; }
 
 .row3 {
-  height: 250px;
-  padding-top: 15px; }
+  height: 200px;
+  padding-top: 10px; }
 
 .heading {
   text-align: center;
   background-color: red;
   color: yellow;
-  padding-top: 15px;
-  padding-bottom: 15px; }
+  font-size: 16px;
+  padding-top: 10px;
+  padding-bottom: 20px; }
 
 /*section containing play button, turn counter and 4 game boxes*/
 #playButton {
@@ -54,37 +59,37 @@ body {
 #redbox {
   background-color: darkred;
   float: center;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   background-position: center;
-  padding: 15px;
+  padding: 10px;
   display: inline-block; }
 
 #greenbox {
   background-color: darkgreen;
-  float: left;
-  height: 200px;
-  width: 200px;
+  float: right;
+  height: 150px;
+  width: 150px;
   background-position: center;
-  padding: 15px;
+  padding: 10px;
   display: inline-block; }
 
 #bluebox {
   background-color: darkblue;
   float: center;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   background-position: center;
-  padding: 15px;
+  padding: 10px;
   display: inline-block; }
 
 #yellowbox {
   background-color: khaki;
-  float: right;
-  height: 200px;
-  width: 200px;
+  float: left;
+  height: 150px;
+  width: 150px;
   background-position: center;
-  padding: 15px;
+  padding: 10px;
   display: inline-block; }
 
 /*# sourceMappingURL=style.css.map */
