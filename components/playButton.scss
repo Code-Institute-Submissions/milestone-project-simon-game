@@ -3,4 +3,7 @@
     width: 300px;
     background-color: $yellowflash;
     color: $redflash;
+    @include phone;
+    @include tablet;
+    @include desktop;
 }
