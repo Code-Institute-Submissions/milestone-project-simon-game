@@ -6,7 +6,7 @@ const bluebox = document.querySelector('#bluebox');
 const yellowbox = document.querySelector('#yellowbox');
 
 const playButton = document.querySelector('#playButton');
-const turnCounter = document.querySelector("#turn");
+const turnCounter = document.querySelector('#turn');
 
 
 //declaring some variables
@@ -14,32 +14,34 @@ let gameTurn = [];
 let playerTurn = [];
 let lightUp;
 let turn;
-let correct;          //is sequence correct?
+
+//is sequence correct?
+let correct;          
 let whosTurn;
-let intervalid;       //time between auto selections
+
+//time between auto selections
+let intervalid;       
 let win;
 let noise = true;
 
 
 //declaring initial colour changing functions
-
 function lightUpColor() {
-  redbox.style.backgroundColor = "red";
-  greenbox.style.backgroundColor = "green";
-  bluebox.style.backgroundColor = "blue";
-  yellowbox.style.backgroundColor = "yellow";
+  redbox.style.backgroundColor = 'red';
+  greenbox.style.backgroundColor = 'green';
+  bluebox.style.backgroundColor = 'blue';
+  yellowbox.style.backgroundColor = 'yellow';
 }
 
 function clearColor() {
-  redbox.style.backgroundColor = "darkred";
-  greenbox.style.backgroundColor = "darkgreen";
-  bluebox.style.backgroundColor = "darkblue";
-  yellowbox.style.backgroundColor = "khaki";
+  redbox.style.backgroundColor = 'darkred';
+  greenbox.style.backgroundColor = 'darkgreen';
+  bluebox.style.backgroundColor = 'darkblue';
+  yellowbox.style.backgroundColor = 'khaki';
 }
 
 
 //syncing the play button to the play function below
-
 playButton.addEventListener('click', (event) => {
         play();
 });
@@ -49,12 +51,14 @@ function play() {
   playerTurn = [];
   win = false;
   turn = 1;
-  turnCounter.innerHTML = "LET'S GO: " + 1;
+  turnCounter.innerHTML = 'HERE WE GO: ' + 1;
   lightUp = 0;
   correct = true;
   intervalid = 0;
+  
+//random selection of the 4 boxes
   for (let i = 0; i < 15; i++) {
-    gameTurn.push(Math.floor(Math.random() * 4) + 1);   //random selection of the 4 boxes
+    gameTurn.push(Math.floor(Math.random() * 4) + 1);   
   }
   whosTurn = true;
   intervalid = setInterval(autoTurn, 800);
@@ -62,19 +66,20 @@ function play() {
 
 
 //computer goes first & selects boxes randomly...
-
 function autoTurn() {
   if (lightUp == turn) {
     clearInterval(intervalid);
     whosTurn = false;
-    clearColor();                  //reset colours after random selection
+//reset colours after random selection
+    clearColor();                  
   }
   
   if (whosTurn) {
     clearColor();
     setTimeout(() => {
-      if (gameTurn[lightUp] == 1) redTile();       //if computer selects this then light up box
-      if (gameTurn[lightUp] == 2) greenTile();         //and play sound from functions below
+//if computer selects this then light up box and play sound from functions below
+      if (gameTurn[lightUp] == 1) redTile();       
+      if (gameTurn[lightUp] == 2) greenTile();
       if (gameTurn[lightUp] == 3) blueTile();
       if (gameTurn[lightUp] == 4) yellowTile();
       lightUp++;
@@ -82,46 +87,46 @@ function autoTurn() {
   }
 }
 
-function redTile() {                           //lights up and adds sound if selected
+//lights up and adds sound if selected
+function redTile() {
   if (noise) {
-    let audio = document.getElementById("buzzRed");
+    let audio = document.getElementById('buzzRed');
     audio.play();
   }
   noise = true;
-  redbox.style.backgroundColor = "red";
+  redbox.style.backgroundColor = 'red';
 }
 
 function greenTile() {
   
   if (noise) {
-    let audio = document.getElementById("buzzGreen");
+    let audio = document.getElementById('buzzGreen');
     audio.play();
   }
   noise = true;
-  greenbox.style.backgroundColor = "green";
+  greenbox.style.backgroundColor = 'green';
 }
 
 function blueTile() {
   if (noise) {
-    let audio = document.getElementById("buzzBlue");
+    let audio = document.getElementById('buzzBlue');
     audio.play();
   }
   noise = true;
-  bluebox.style.backgroundColor = "blue";
+  bluebox.style.backgroundColor = 'blue';
 }
 
 function yellowTile() {
   if (noise) {
-    let audio = document.getElementById("buzzYellow");
+    let audio = document.getElementById('buzzYellow');
     audio.play();
   }
   noise = true;
-  yellowbox.style.backgroundColor = "yellow";
+  yellowbox.style.backgroundColor = 'yellow';
 }
 
 
 //then player goes and boxes are waiting to be clicked...
-
 redbox.addEventListener('click', (event) => {
    playerTurn.push(1);
     check();
@@ -164,25 +169,26 @@ yellowbox.addEventListener('click', (event) => {
 
 
 //to check if the player selected the correct boxes
-
 function check() {
   if (playerTurn[playerTurn.length - 1] !== gameTurn[playerTurn.length - 1])
     correct = false;
 
-  if (playerTurn.length == 10 && correct) {        //10 levels,can add more
+//I put in 10 levels here but I can add more
+  if (playerTurn.length == 10 && correct) { 
     winGame();
 }
 
   if (correct == false) {
     lightUpColor();
-    let audio = document.getElementById("buzzlose");        //losing tone
+//losing tone here
+    let audio = document.getElementById('buzzlose');
       audio.play();
       noise = true;
-    turnCounter.innerHTML = "THAT'S WRONG!";
+    turnCounter.innerHTML = 'THAT IS WRONG!';
     setTimeout(() => {
       turnCounter.innerHTML = turn;
       clearColor();
-      turnCounter.innerHTML = "BACK TO LEVEL 1";
+      turnCounter.innerHTML = 'BACK TO LEVEL 1';
     }, 800);
   }
 
@@ -199,9 +205,10 @@ function check() {
 
 function winGame () {
   lightUpColor();
-  turnCounter.innerHTML = "YOU WIN!";
+  turnCounter.innerHTML = 'YOU WIN!';
   win = true;
-  let audio = document.getElementById("buzzwin");         //winners tone
+//winners tone here
+  let audio = document.getElementById('buzzwin');
     audio.play();
     noise = true;
 }
