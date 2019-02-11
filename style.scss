@@ -1,17 +1,17 @@
 /*colors, box attributes & most common reused attributes for boxes in mixin*/
-@import "helpers/colours";
-@import "helpers/dimensions";
-@import "helpers/mixins";
-@import "helpers/media_queries";
+@import "assets/helpers/colours";
+@import "assets/helpers/dimensions";
+@import "assets/helpers/mixins";
+@import "assets/helpers/media_queries";
 
 
 /*General body styling*/
-@import "pageLayout/body";
-@import "pageLayout/header";
+@import "assets/pageLayout/body";
+@import "assets/pageLayout/header";
 
 
 /*section containing play button, turn counter and 4 game boxes*/
-@import "components/playButton";
-@import "components/turnCounter";
-@import "components/gameBoxes";
+@import "assets/components/playButton";
+@import "assets/components/turnCounter";
+@import "assets/components/gameBoxes";
 

@@ -1,8 +1,11 @@
 #playButton {
     height: 50px;
     width: 300px;
-    background-color: $yellowflash;
-    color: $redflash;
+    background-color: $white;
+    font-family: impact;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: $black;
     @include phone;
     @include tablet;
     @include desktop;

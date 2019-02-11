@@ -188,7 +188,7 @@ function check() {
     setTimeout(() => {
       turnCounter.innerHTML = turn;
       clearColor();
-      turnCounter.innerHTML = 'BACK TO LEVEL 1';
+      turnCounter.innerHTML = 'YOU CRASHED - TRY AGAIN';
     }, 800);
   }
 
