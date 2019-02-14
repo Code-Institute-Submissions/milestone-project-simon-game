@@ -46,7 +46,7 @@ As per my primary targets above:
 
 Other Testing...
 
-- Jasmine: 
+- Jasmine: Set up a Jasmine Testing folder with specs and scripts files to test the buttons on the game.
 
 ## Deployment
 I deployed my project using Github Pages. From my repository, I selected "Settings" and scrolled down to Github Pages. I clicked on the "Source" drop-down menu and selected "Master Branch" then clicked "Save". I then received the link to my website and copied it. I pasted the link into the top of my repository along with a short description of the project. I clicked on the link and did more testing of my site and everything is working.
