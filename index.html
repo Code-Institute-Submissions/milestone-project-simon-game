@@ -12,40 +12,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="style.css" type="text/css" />
 
-    <!--created tones in garageband & edited the duration in quicktime-->
-    <audio id = "buzzRed">
-        <source src = "assets/redtone.mp3"></source>
-    </audio>
-    
-    <audio id = "buzzGreen">
-        <source src = "assets/greentone.mp3"></source>
-    </audio>
-    
-    <audio id = "buzzBlue">
-        <source src = "assets/bluetone.mp3"></source>
-    </audio>
-    
-    <audio id = "buzzYellow">
-        <source src = "assets/yellowtone.mp3"></source>
-    </audio>
-    
-    <audio id = "buzzwin">
-        <source src = "assets/wintone.mp3"></source>
-    </audio>
-    
-    <audio id = "buzzlose">
-        <source src = "assets/losetone.mp3"></source>
-    </audio>
-
     <title>Simon Game</title>
 </head>
 
 <body>
+    <!--created tones in garageband & edited the duration in quicktime-->
+    <audio id="buzzRed">
+        <source src = "assets/redtone.mp3">
+    </audio>
+
+    <audio id="buzzGreen">
+        <source src = "assets/greentone.mp3">
+    </audio>
+
+    <audio id="buzzBlue">
+        <source src = "assets/bluetone.mp3">
+    </audio>
+
+    <audio id="buzzYellow">
+        <source src = "assets/yellowtone.mp3">
+    </audio>
+
+    <audio id="buzzwin">
+        <source src = "assets/wintone.mp3">
+    </audio>
+
+    <audio id="buzzlose">
+        <source src = "assets/losetone.mp3">
+    </audio>
 
     <!--Top section containing the play button and display counter-->
     <div class="heading">
         <h1>Space Captain Simon!</h1><br>
-        <button id="playButton"  class="hvr-sweep-to-bottom"><i class="far fa-star"></i><span> Begin Landing Sequence </span><i class="far fa-star"></i></button><br><br>
+        <button id="playButton" class="hvr-sweep-to-bottom"><i class="far fa-star"></i><span> Begin Landing Sequence </span><i class="far fa-star"></i></button><br><br>
         <p><i>"Follow the captain's sequence to land your ship safely!"</i></p>
         <div id="turn" class="countertext">STATUS</div>
     </div>
@@ -79,7 +78,6 @@
     </section>
 
     <script src="assets/js/main.js"></script>
-
 </body>
 
 </html>

@@ -1,24 +1,27 @@
 #redbox {
-    @include box{
-    background-color: $red;
-    float: center;
-}}
+    @include box {
+        background-color: $red;
+        float: center;
+    }
+}
 
 #greenbox {
-    @include box{
-    background-color: $green;
-    float: right;
-}}
+    @include box {
+        background-color: $green;
+        float: right;
+    }
+}
 
 #bluebox {
-    @include box{
-    background-color: $blue;
-    float: center;
-}}
+    @include box {
+        background-color: $blue;
+        float: center;
+    }
+}
 
 #yellowbox {
-    @include box{
-    background-color: $yellow;
-    float: left;
-}}
-
+    @include box {
+        background-color: $yellow;
+        float: left;
+    }
+}

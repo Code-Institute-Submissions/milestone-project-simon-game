@@ -9,15 +9,13 @@ function play() {
 
 function lightUpColor() {
   if ('redbox') {
-      return 'red';
+    return 'red';
   }
 }
 
 
 function clearColor() {
   if ('redbox') {
-      return 'darkred';
+    return 'darkred';
   }
 }
-
-

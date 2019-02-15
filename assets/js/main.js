@@ -16,11 +16,11 @@ let lightUp;
 let turn;
 
 //is sequence correct?
-let correct;          
+let correct;
 let whosTurn;
 
 //time between auto selections
-let intervalid;       
+let intervalid;
 let win;
 let noise = true;
 
@@ -43,7 +43,7 @@ function clearColor() {
 
 //syncing the play button to the play function below
 playButton.addEventListener('click', (event) => {
-        play();
+  play();
 });
 
 function play() {
@@ -55,10 +55,10 @@ function play() {
   lightUp = 0;
   correct = true;
   intervalid = 0;
-  
-//random selection of the 4 boxes
+
+  //random selection of the 4 boxes
   for (let i = 0; i < 15; i++) {
-    gameTurn.push(Math.floor(Math.random() * 4) + 1);   
+    gameTurn.push(Math.floor(Math.random() * 4) + 1);
   }
   whosTurn = true;
   intervalid = setInterval(autoTurn, 800);
@@ -70,15 +70,15 @@ function autoTurn() {
   if (lightUp == turn) {
     clearInterval(intervalid);
     whosTurn = false;
-//reset colours after random selection
-    clearColor();                  
+    //reset colours after random selection
+    clearColor();
   }
-  
+
   if (whosTurn) {
     clearColor();
     setTimeout(() => {
-//if computer selects this then light up box and play sound from functions below
-      if (gameTurn[lightUp] == 1) redTile();       
+      //if computer selects this then light up box and play sound from functions below
+      if (gameTurn[lightUp] == 1) redTile();
       if (gameTurn[lightUp] == 2) greenTile();
       if (gameTurn[lightUp] == 3) blueTile();
       if (gameTurn[lightUp] == 4) yellowTile();
@@ -98,7 +98,7 @@ function redTile() {
 }
 
 function greenTile() {
-  
+
   if (noise) {
     let audio = document.getElementById('buzzGreen');
     audio.play();
@@ -128,43 +128,47 @@ function yellowTile() {
 
 //then player goes and boxes are waiting to be clicked...
 redbox.addEventListener('click', (event) => {
-   playerTurn.push(1);
-    check();
-    redTile();
-    if(!win) {
-      setTimeout(() => {
-        clearColor(); }, 300);
-    }
+  playerTurn.push(1);
+  check();
+  redTile();
+  if (!win) {
+    setTimeout(() => {
+      clearColor();
+    }, 300);
+  }
 });
 
 greenbox.addEventListener('click', (event) => {
   playerTurn.push(2);
-    check();
-    greenTile();
-    if(!win) {
-      setTimeout(() => {
-        clearColor(); }, 300);
-    }
+  check();
+  greenTile();
+  if (!win) {
+    setTimeout(() => {
+      clearColor();
+    }, 300);
+  }
 });
 
 bluebox.addEventListener('click', (event) => {
   playerTurn.push(3);
-    check();
-    blueTile();
-    if(!win) {
-      setTimeout(() => {
-        clearColor(); }, 300);
-    }
+  check();
+  blueTile();
+  if (!win) {
+    setTimeout(() => {
+      clearColor();
+    }, 300);
+  }
 });
 
 yellowbox.addEventListener('click', (event) => {
   playerTurn.push(4);
-    check();
-    yellowTile();
-    if(!win) {
-      setTimeout(() => {
-        clearColor(); }, 300);
-    }
+  check();
+  yellowTile();
+  if (!win) {
+    setTimeout(() => {
+      clearColor();
+    }, 300);
+  }
 });
 
 
@@ -173,17 +177,17 @@ function check() {
   if (playerTurn[playerTurn.length - 1] !== gameTurn[playerTurn.length - 1])
     correct = false;
 
-//I put in 10 levels here but I can add more
-  if (playerTurn.length == 10 && correct) { 
+  //I put in 10 levels here but I can add more
+  if (playerTurn.length == 10 && correct) {
     winGame();
-}
+  }
 
   if (correct == false) {
     lightUpColor();
-//losing tone here
+    //losing tone here
     let audio = document.getElementById('buzzlose');
-      audio.play();
-      noise = true;
+    audio.play();
+    noise = true;
     turnCounter.innerHTML = 'THAT IS WRONG!';
     setTimeout(() => {
       turnCounter.innerHTML = turn;
@@ -200,15 +204,15 @@ function check() {
     turnCounter.innerHTML = turn;
     intervalid = setInterval(autoTurn, 800);
   }
-  }
+}
 
 
-function winGame () {
+function winGame() {
   lightUpColor();
   turnCounter.innerHTML = 'YOU WIN!';
   win = true;
-//winners tone here
+  //winners tone here
   let audio = document.getElementById('buzzwin');
-    audio.play();
-    noise = true;
+  audio.play();
+  noise = true;
 }

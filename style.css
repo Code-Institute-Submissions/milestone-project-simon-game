@@ -1,8 +1,12 @@
 /*colors, box attributes & most common reused attributes for boxes in mixin*/
+
 /*media queries for responsiveness*/
+
 /*General body styling*/
+
 body {
-  background-color: aqua; }
+  background-color: aqua;
+}
 
 .container {
   text-align: center;
@@ -10,26 +14,36 @@ body {
   padding-left: 10px;
   padding-right: 10px;
   max-width: 90%;
-  background-color: black; }
-  @media (min-width: 768px) and (max-width: 992px -1px) {
-    .container {
-      max-width: 50%; } }
-  @media (min-width: 992px) and (max-width: 1200px -1px) {
-    .container {
-      max-width: 50%; } }
+  background-color: black;
+}
+
+@media (min-width: 768px) and (max-width: 992px -1px) {
+  .container {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px -1px) {
+  .container {
+    max-width: 50%;
+  }
+}
 
 .row1 {
   height: 200px;
-  padding-top: 10px; }
+  padding-top: 10px;
+}
 
 .row2 {
   height: 200px;
   padding-top: 10px;
-  padding-bottom: 0px; }
+  padding-bottom: 0px;
+}
 
 .row3 {
   height: 200px;
-  padding-top: 10px; }
+  padding-top: 10px;
+}
 
 .heading {
   text-align: center;
@@ -37,14 +51,17 @@ body {
   color: black;
   font-size: 16px;
   padding-top: 10px;
-  padding-bottom: 20px; }
+  padding-bottom: 20px;
+}
 
 h1 {
   font-family: impact;
   font-size: 40px;
-  letter-spacing: 1px; }
+  letter-spacing: 1px;
+}
 
 /*section containing play button, turn counter and 4 game boxes*/
+
 #playButton {
   height: 50px;
   width: 300px;
@@ -52,7 +69,8 @@ h1 {
   font-family: impact;
   font-size: 20px;
   letter-spacing: 1px;
-  color: black; }
+  color: black;
+}
 
 #turn {
   background: red;
@@ -66,20 +84,22 @@ h1 {
   text-align: center;
   vertical-align: middle;
   line-height: 40px;
-  display: inline-block; }
+  display: inline-block;
+}
 
 .countertext {
   font-family: impact;
-  text-align: center; }
+  text-align: center;
+}
 
 #redbox {
   background-color: darkred;
-  float: center;
   height: 150px;
   width: 150px;
   background-position: center;
   padding: 10px;
-  display: inline-block; }
+  display: inline-block;
+}
 
 #greenbox {
   background-color: darkgreen;
@@ -88,16 +108,17 @@ h1 {
   width: 150px;
   background-position: center;
   padding: 10px;
-  display: inline-block; }
+  display: inline-block;
+}
 
 #bluebox {
   background-color: darkblue;
-  float: center;
   height: 150px;
   width: 150px;
   background-position: center;
   padding: 10px;
-  display: inline-block; }
+  display: inline-block;
+}
 
 #yellowbox {
   background-color: khaki;
@@ -106,6 +127,7 @@ h1 {
   width: 150px;
   background-position: center;
   padding: 10px;
-  display: inline-block; }
+  display: inline-block;
+}
 
 /*# sourceMappingURL=style.css.map */

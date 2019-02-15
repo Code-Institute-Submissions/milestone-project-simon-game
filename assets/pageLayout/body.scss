@@ -11,10 +11,12 @@ body {
     background-color: $black;
     @include tablet {
         max-width: 50%;
-    };
+    }
+    ;
     @include desktop {
         max-width: 50%;
-    };
+    }
+    ;
 }
 
 .row1 {
