@@ -1,5 +1,6 @@
 # Interactive Frontend Development Milestone Project
-For my IFD Milestone Project, I am creating a single page application for a game called “Simon”.  It is a game where the computer selects a pattern of colours and the user-player must copy the exact sequence to progress to the next level where the sequence gets harder.  It is a fun game for everybody to play.
+For my IFD Milestone Project, I am creating a single page application for a game called “Simon”.  
+It is a game where the computer selects a pattern of colours and the user-player must copy the exact sequence to progress to the next level where the sequence gets harder.  It is a fun game for everybody to play.
 
 ## UX
 A typical player of Simon would be looking for the following. 
@@ -10,11 +11,14 @@ A typical player of Simon would be looking for the following.
 4. Reassurance that they are following the proper sequence set out by the computer and notification if they win or lose.  
 5. A new user will want to know how to play the game in a single sentence and be excited to play.
 
-To add a bit of excitement to the game, I created a spaceship scenario where you must select the proper button-sequence to land your ship.  I called the game "Space captain Simon" where the computer is your captain with the sequence you must follow. Working with "mobile-first" in mind, I decided to divide the page into two sections: the top-header section for the start button, a short explanation and a level counter; and the main body section for the four game-tiles. 
+To add a bit of excitement to the game, I created a spaceship scenario where you must select the proper button-sequence to land your ship. 
+I called the game "Space captain Simon" where the computer is your captain with the sequence you must follow. Working with "mobile-first" in mind, 
+I decided to divide the page into two sections: the top-header section for the start button, a short explanation and a level counter; and the main body section for the four game-tiles. 
 I used shaded versions of red, green, yellow and blue on the gaming-tiles so when they are selected they will turn into normal red, green, yellow and blue colours giving a “light up” effect.  
 The mock-up I used for planning the application is in a folder in my project under the name simonGameMockUp.jpeg
 
-In the top section I have put the name of the game on top.  Below that, I have the start button with a single sentence underneath to describe what the user must do to play the game.  Then under that I have a game counter to show what level the user is in the game. I used the "impact" font on the lettering to create a robotic/space feel to the game. 
+In the top section I have put the name of the game on top.  Below that, I have the start button with a single sentence underneath to describe what the user must do to play the game. 
+Then under that I have a game counter to show what level the user is in the game. I used the "impact" font on the lettering to create a robotic/space feel to the game. 
 
 In the main body section, I have the four game-tiles in a cross formation on a black background so the colours will really light up out of the dark body.
 
@@ -51,7 +55,9 @@ Other Testing...
 - HTML and CSS code was validated through the relevant validators.
 
 ## Deployment
-I deployed my project using Github Pages. From my repository, I selected "Settings" and scrolled down to Github Pages. I clicked on the "Source" drop-down menu and selected "Master Branch" then clicked "Save". I then received the link to my website and copied it. I pasted the link into the top of my repository along with a short description of the project. I clicked on the link and did more testing of my site and everything is working.
+I deployed my project using Github Pages. From my repository, I selected "Settings" and scrolled down to Github Pages. I clicked on the "Source" drop-down menu and selected "Master Branch" then clicked "Save". 
+I then received the link to my website and copied it. I pasted the link into the top of my repository along with a short description of the project. I clicked on the link and did more testing of my site and 
+everything is working. Here is the live link to my "Simon" game https://jeffoneillstudent.github.io/milestone-project-simon-game/
 ## Credits
 ### Content
 The information on Simon game from the brief (YouTube).
