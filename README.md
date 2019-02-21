@@ -63,5 +63,5 @@ Sounds created by me in Garageband App on Mac.
 Code institute tutorials.  
 w3schools.com  
 Slack  
-Javascript tutorials on Udemy 
+Javascript tutorials on Udemy  
 stackoverflow.com
