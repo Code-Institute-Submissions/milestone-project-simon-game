@@ -15,7 +15,7 @@ To add a bit of excitement to the game, I created a spaceship scenario where you
 I called the game "Space captain Simon" where the computer is your captain with the sequence you must follow. Working with "mobile-first" in mind, 
 I decided to divide the page into two sections: the top-header section for the start button, a short explanation and a level counter; and the main body section for the four game-tiles. 
 I used shaded versions of red, green, yellow and blue on the gaming-tiles so when they are selected they will turn into normal red, green, yellow and blue colours giving a “light up” effect.  
-The mock-up I used for planning the application is in a folder in my project under the name simonGameMockUp.jpeg
+The mock-up I used for planning the application is a file in my project under the name simonGameMockUp.jpeg
 
 In the top section I have put the name of the game on top.  Below that, I have the start button with a single sentence underneath to describe what the user must do to play the game. 
 Then under that I have a game counter to show what level the user is in the game. I used the "impact" font on the lettering to create a robotic/space feel to the game. 
